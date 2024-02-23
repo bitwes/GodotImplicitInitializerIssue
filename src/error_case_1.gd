@@ -18,7 +18,6 @@ func _init():
 	print("\n-- breaking it")
 	Dynamic.create_script(Dynamic.EXTEND_NODE_USES_FOO_SOURCE)
 
-
 	Dynamic.create_script_that_extends_foo_and_instance() # ERROR: Parameter "p_script->implicit_initializer" is null.
 	Dynamic.create_script_that_extends_foo_and_instance() # ERROR: Parameter "p_script->implicit_initializer" is null.
 

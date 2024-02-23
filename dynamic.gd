@@ -44,7 +44,7 @@ static func create_script_that_extends_foo_and_instance():
 	print('extended = ', extended)
 
 	var extended_inst = extended.new()
-	print('extended = ', extended_inst)
+	print('extended_inst = ', extended_inst)
 
 
 # When the resoure path is '' and we do nothing with the result of
