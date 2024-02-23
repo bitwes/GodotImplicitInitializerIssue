@@ -3,7 +3,7 @@ class_name Dynamic
 const EXTEND_NODE_USES_FOO_SOURCE = "extends 'res://src/node_uses_foo.gd'"
 const EXTEND_FOO_PATH_SOURCE = "extends 'res://src/foo.gd'"
 const EXTEND_FOO_CLASS_NAME_SOURCE = "extends Foo"
-static var created_count = 0
+static var rpath_count = 0
 
 
 static func create_script(source, resourece_path=null):
@@ -20,8 +20,9 @@ static func create_script(source, resourece_path=null):
 
 
 static func create_script_with_auto_resource_path(source):
-	var rpath = str('unique_resource_path_', created_count)
-	created_count += 1
+	print("\n-- create_script_with_auto_resource_path")
+	var rpath = str('unique_resource_path_', rpath_count)
+	rpath_count += 1
 	return create_script(source, rpath)
 
 
@@ -36,8 +37,8 @@ static func create_sript_extends_class_name(class_name_str):
 	return create_script(src)
 
 
-static func make_extend_foo_from_source():
-	print("\n", '-- func make_extend_foo_from_source')
+static func create_script_that_extends_foo_and_instance():
+	print("\n", '-- create_script_that_extends_foo_and_instance')
 
 	var extended = create_script(EXTEND_FOO_PATH_SOURCE)
 	print('extended = ', extended)

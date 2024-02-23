@@ -4,6 +4,6 @@ extends SceneTree
 # to Foo before this.
 func _init():
 	var f = Foo.new()
-	Dynamic.make_extend_foo_from_source()
+	Dynamic.create_script_that_extends_foo_and_instance()
 
 	quit()
